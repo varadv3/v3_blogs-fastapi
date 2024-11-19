@@ -11,6 +11,6 @@ class Settings(BaseSettings):
     access_token_expiration_time: int
 
     class Config:
-        env_file = "/home/varadv3/Documents/Master/Python/fastapi/backend/.env"
+        env_file = "/home/varadv3/Documents/Master/Python/v3_blogs-fastapi/backend/.env"
 
 settings = Settings()

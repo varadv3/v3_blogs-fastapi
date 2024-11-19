@@ -14,10 +14,11 @@ def get_database_connection():
                 password=settings.database_password, 
                 row_factory=dict_row
             )
-        print("Database Connected!")
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Database not Connected!")
     else:
+        print("Database Connected!")
         yield conn
     finally:
         conn.close()
